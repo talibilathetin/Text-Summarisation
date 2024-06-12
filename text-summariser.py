@@ -29,7 +29,7 @@ def load_llm():
     # Their are multiple models available just replace it in place of model and try it.
 
     
-    llm = CTransformers(model='/Users/talib/Documents/Projects/Summary/Text Summarisation/Test/llama-2-7b-chat.ggmlv3.q2_K.bin',
+    llm = CTransformers(model='llama-2-7b-chat.ggmlv3.q2_K.bin',
                       model_type='llama',
                       config={'max_new_tokens': 512,
                               'temperature': 0.01,
@@ -48,7 +48,7 @@ def chains_and_response(docs):
     return chain.run(docs)
 
 
-reader = PdfReader('/Users/talib/Documents/Projects/Summary/Text Summarisation/Data/Attention is all you need.pdf') 
+reader = PdfReader('Data/Attention is all you need.pdf') 
 print('Number of Pages:' ,len(reader.pages)) 
 
 
